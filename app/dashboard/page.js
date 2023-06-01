@@ -158,7 +158,7 @@ function Dashboard() {
     <div className="h-full max-h-full p-6 flex">
       <Sidebar activeSection={activeSection} />
 
-      <div className="py-3 px-10 lg:px-14 grow flex flex-col justify-between overflow-y-auto">
+      <div className="py-3 pl-10 pr-4 lg:pl-14 lg:pr-10 grow flex flex-col justify-between overflow-y-auto">
         <div className="flex items-center">
           <h3>Dashboard</h3>
 
