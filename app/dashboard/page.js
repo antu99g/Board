@@ -117,7 +117,6 @@ function Dashboard() {
 
   // Fetching data for line-graph and pie-chart
   useEffect(() => {
-    console.log("environment url", process.env.NEXT_PUBLIC_APP_URL);
     // Fetch user data
     const fetchUsers = fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/users`)
       .then((res) => res.json())
