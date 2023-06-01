@@ -118,7 +118,7 @@ function Dashboard() {
   // Fetching data for line-graph and pie-chart
   useEffect(() => {
     // Fetch user data
-    const fetchUsers = fetch("http://localhost:3000/api/users")
+    const fetchUsers = fetch(`${process.env.NEXT_APP_URL}/api/users`)
       .then((res) => res.json())
       .then((data) => {
         setUserData(() => {
@@ -130,7 +130,7 @@ function Dashboard() {
       });
 
     // Fetch item data
-    const fetchItems = fetch("http://localhost:3000/api/items")
+    const fetchItems = fetch(`${process.env.NEXT_APP_URL}/api/items`)
       .then((res) => res.json())
       .then((data) => {
         let total = 0;

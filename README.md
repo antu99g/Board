@@ -11,7 +11,7 @@ To run this project locally follow these steps :
 1. Download the .zip file of the repository and extract it in your system. Or you can clone the repository with the following command
 
 ```bash
-  git clone https://github.com/antu99g/Invoice-Generator.git
+  git clone https://github.com/antu99g/Board.git
 ```
 
 2. Go to the project directory
@@ -38,6 +38,8 @@ To run this project locally follow these steps :
 
 `BOARD_GOOGLE_CLIENT_SECRET` : Google auth client secret
 
+`NEXT_APP_URL` : http://localhost:3000 if running locally
+
 ## Hosted Link
 
-Visit site: [Board](https://board-2dc293.netlify.app)
+Visit site: [Board](https://board-930f48.netlify.app)
