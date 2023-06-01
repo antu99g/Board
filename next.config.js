@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {};
 
-module.exports = nextConfig
+// Initialize environment variables
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+module.exports = nextConfig;

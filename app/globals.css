@@ -2,26 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+h5 {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+h6 {
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* Circle for chart legends */
+.legend-circle::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Colors for line-graph labels */
+.line-green::before {
+  background-color: rgba(155, 221, 124, 1);
+}
+.line-pink::before {
+  background: rgba(233, 160, 160, 1);
+}
+
+/* Colors for pie-chart labels */
+.pie-green::before {
+  background: rgba(152, 216, 158, 1);
+}
+.pie-yellow::before {
+  background: rgba(246, 220, 125, 1);
+}
+.pie-pink::before {
+  background: rgba(238, 132, 132, 1);
 }
