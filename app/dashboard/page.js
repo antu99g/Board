@@ -155,10 +155,10 @@ function Dashboard() {
 
   // if (session) {
   return (
-    <div className="h-full max-h-full p-6 flex">
+    <div className="h-full max-h-full p-6 md:p-5 lg:p-6 flex">
       <Sidebar activeSection={activeSection} />
 
-      <div className="py-3 pl-10 pr-4 lg:pl-14 lg:pr-10 grow flex flex-col justify-between overflow-y-auto">
+      <div className="py-3 md:pl-10 lg:pl-14 md:pr-5 lg:pr-8 lg:pb-6 xl:pb-14 grow flex flex-col justify-between overflow-y-auto">
         <div className="flex items-center">
           <h3>Dashboard</h3>
 
@@ -189,8 +189,8 @@ function Dashboard() {
           />
         </div>
 
-        <div className="mt-5 flex justify-between">
-          <span className="w-1/4 mr-[2.5vw] px-4 py-3 lg:py-4 bg-green flex flex-col rounded-2xl">
+        <div className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-8 justify-between">
+          <span className="px-4 md:px-2 lg:px-4 py-3 lg:py-4 bg-green flex flex-col rounded-2xl">
             <Image
               src="/revenue-icon.svg"
               height={20}
@@ -199,10 +199,12 @@ function Dashboard() {
               className="ml-auto"
             />
             <p className="font-lato text-sm">Total Revenues</p>
-            <h3 className="font-opensans">$2,129,430</h3>
+            <h3 className="text-xl md:text-lg lg:text-xl font-opensans">
+              $2,129,430
+            </h3>
           </span>
 
-          <span className="w-1/4 mr-[2.5vw] px-4 py-3 lg:py-4 bg-peach flex flex-col rounded-2xl">
+          <span className="px-4 md:px-2 lg:px-4 py-3 lg:py-4 bg-peach flex flex-col rounded-2xl">
             <Image
               src="/transaction-icon.svg"
               height={17}
@@ -210,11 +212,13 @@ function Dashboard() {
               alt="Transaction icon"
               className="ml-auto"
             />
-            <p className="font-lato text-custom">Total Transactions</p>
-            <h3 className="font-opensans">1,520</h3>
+            <p className="font-lato text-sm">Total Transactions</p>
+            <h3 className="text-xl md:text-lg lg:text-xl font-opensans">
+              1,520
+            </h3>
           </span>
 
-          <span className="w-1/4 mr-[2.5vw] px-4 py-3 lg:py-4 bg-pink flex flex-col rounded-2xl">
+          <span className="px-4 md:px-2 lg:px-4 py-3 lg:py-4 bg-pink flex flex-col rounded-2xl">
             <Image
               src="/like-icon.svg"
               height={18}
@@ -222,11 +226,13 @@ function Dashboard() {
               alt="Like icon"
               className="ml-auto"
             />
-            <p className="font-lato text-custom">Total Likes</p>
-            <h3 className="font-opensans">9,721</h3>
+            <p className="font-lato text-sm">Total Likes</p>
+            <h3 className="text-xl md:text-lg lg:text-xl font-opensans">
+              9,721
+            </h3>
           </span>
 
-          <span className="w-1/4 px-4 py-3 lg:py-4 bg-purple flex flex-col rounded-2xl">
+          <span className="px-4 md:px-2 lg:px-4 py-3 lg:py-4 bg-purple flex flex-col rounded-2xl">
             <Image
               src="/users-icon.svg"
               height={30}
@@ -234,12 +240,12 @@ function Dashboard() {
               alt="User icon"
               className="ml-auto"
             />
-            <p className="font-lato text-custom">Total Users</p>
-            <h3 className="font-opensans">892</h3>
+            <p className="font-lato text-sm">Total Users</p>
+            <h3 className="text-xl md:text-lg lg:text-xl font-opensans">892</h3>
           </span>
         </div>
 
-        <div className="my-5 pt-4 pb-2 md:pb-2 lg:pb-3 md:px-5 lg:px-8 grow flex flex-col bg-white rounded-xl">
+        <div className="my-5 pt-4 pb-2 md:pb-2 lg:pb-3 px-3 md:px-5 lg:px-8 flex flex-col bg-white rounded-xl">
           <h4>Activities</h4>
           <div className="mb-1 flex justify-between">
             <small className="flex items-center text-gray-400">
@@ -251,12 +257,12 @@ function Dashboard() {
               <span className="legend-circle line-green mr-6">User</span>
             </span>
           </div>
-          <div className="w-full h-36 mt-auto">
+          <div className="w-full md:h-36 xl:h-40 mt-auto">
             <Line data={lineData} options={lineOptions} />
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-2 justify-between gap-x-24 md:gap-x-5 lg:gap-x-24">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 sm:justify-between gap-y-5 sm:gap-y-0 gap-x-0 sm:gap-x-5 lg:gap-x-24">
           <div className="py-4 px-5 bg-white rounded-xl">
             <div className="mb-2 flex justify-between">
               <h4>Top products</h4>
@@ -266,22 +272,22 @@ function Dashboard() {
               </small>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex flex-row md:flex-col lg:flex-row items-center">
               <div className="h-20 w-20 mx-7">
                 <Pie data={pieData} options={pieOptions} />
               </div>
 
               {itemData.total && (
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col md:flex-row lg:flex-col justify-between items-start md:items-center lg:items-start">
                   {itemData.qty.map((qty, index) => {
                     return (
                       <div className="mb-1 flex flex-col" key={index}>
                         <h5
-                          className={`m-0 legend-circle ${pieChartColors[index]}`}
+                          className={`m-0 text-xs text-left md:text-center lg:text-left legend-circle ${pieChartColors[index]}`}
                         >
                           {itemData.labels[index]}
                         </h5>
-                        <small className="ml-3 font-lato font-thin text-gray-400">
+                        <small className="ml-3 md:ml-5 lg:ml-4 font-lato font-thin text-gray-400">
                           {`${Math.round((qty * 100) / itemData.total)}%`}
                         </small>
                       </div>

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-size: 0.8rem;
-  font-weight: 500;
-}
 h1 {
   font-size: 3rem;
   font-weight: 700;

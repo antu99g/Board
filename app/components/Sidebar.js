@@ -3,10 +3,10 @@ import Image from "next/image";
 
 function Sidebar({ activeSection }) {
   return (
-    <div className="w-1/6 md:w-1/5 lg:w-1/6 px-8 py-9 flex flex-col bg-black text-white rounded-3xl">
+    <div className="md:w-1/4 lg:w-1/6 py-9 md:px-4 lg:px-8 hidden md:flex flex-col bg-black text-white rounded-3xl">
       <h2 className="mb-8">Board.</h2>
 
-      <ul className="flex flex-col">
+      <ul className="flex flex-col test-base md:text-sm lg:test-base">
         <li
           className={`mb-5 flex items-center ${
             activeSection === "dashboard" ? "font-bold" : "font-thin"
@@ -17,7 +17,7 @@ function Sidebar({ activeSection }) {
             height={13}
             width={13}
             alt="Dashboard icon"
-            className="mr-3.5 stroke-2"
+            className="md:mr-2 lg:mr-3.5 stroke-2"
           />
           <Link href="">Dashboard</Link>
         </li>
@@ -28,7 +28,7 @@ function Sidebar({ activeSection }) {
             height={12}
             width={12}
             alt="Transaction icon"
-            className="mr-3.5"
+            className="md:mr-2 lg:mr-3.5"
           />
           <Link href="">Transactions</Link>
         </li>
@@ -39,7 +39,7 @@ function Sidebar({ activeSection }) {
             height={14}
             width={15}
             alt="Schedule icon"
-            className="mr-3.5"
+            className="md:mr-2 lg:mr-3.5"
           />
           <Link href="">Schedules</Link>
         </li>
@@ -50,7 +50,7 @@ function Sidebar({ activeSection }) {
             height={14}
             width={14}
             alt="User icon"
-            className="mr-3.5"
+            className="md:mr-2 lg:mr-3.5"
           />
           <Link href="">Users</Link>
         </li>
@@ -61,7 +61,7 @@ function Sidebar({ activeSection }) {
             height={13}
             width={13}
             alt="Settings icon"
-            className="mr-3.5"
+            className="md:mr-2 lg:mr-3.5"
           />
           <Link href="">Settings</Link>
         </li>

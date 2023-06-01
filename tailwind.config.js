@@ -31,7 +31,8 @@ module.exports = {
         xs: ".6rem",
         sm: "0.7rem",
         base: "0.8rem",
-        xl: "1.25rem",
+        lg: "1rem",
+        xl: "1.2rem",
       },
       fontWeight: {
         thin: "400",

@@ -11,7 +11,7 @@ export default function RootLayout({ children, pageProps }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${lato.variable} ${open_Sans.variable} h-screen font-montserrat bg-main`}
+        className={`${montserrat.variable} ${lato.variable} ${open_Sans.variable} h-screen text-base font-montserrat font-medium bg-main`}
       >
         {/* <SessionProvider session={pageProps.session}> */}
         {children}

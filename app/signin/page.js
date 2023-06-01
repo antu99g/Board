@@ -17,7 +17,7 @@ function Signin() {
 
   return (
     <div className="h-full flex">
-      <div className="w-2/5 grid place-content-center bg-black text-white">
+      <div className="w-0 md:w-2/5 grid place-content-center bg-black text-white">
         <h1>Board.</h1>
       </div>
 
