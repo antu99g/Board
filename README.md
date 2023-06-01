@@ -34,11 +34,13 @@ To run this project locally follow these steps :
 
 ## Environment Variables
 
+Create a .env.local file and add the following environment variables :
+
 `BOARD_GOOGLE_CLIENT_ID` : Google auth client id
 
 `BOARD_GOOGLE_CLIENT_SECRET` : Google auth client secret
 
-`NEXT_APP_URL` : http://localhost:3000 if running locally
+`NEXT_PUBLIC_APP_URL` : http://localhost:3000 if running locally
 
 ## Hosted Link
 
